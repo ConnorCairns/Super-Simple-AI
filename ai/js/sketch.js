@@ -26,6 +26,8 @@ function draw() {
     pop.calcFitness();
     pop.naturalSelection();
     pop.mutateBaby();
+    let gen = select('#gen')
+    gen.html(pop.generation);
   } else {
     pop.update();
     pop.show();
