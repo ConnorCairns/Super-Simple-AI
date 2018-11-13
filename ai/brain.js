@@ -1,9 +1,8 @@
 angle = 0
-dirs = []
-step = 0
+
 class Brain {
     constructor(moves) {
-        this.dirs = []
+        this.dirs = [];
         this.step = 0;
         for (let i = 0; i < moves; i++) {
             angle = Math.floor((Math.random() * (2*PI)) + 1)

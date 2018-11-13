@@ -9,6 +9,8 @@ function draw() {
   fill(255, 0, 0);
   ellipse(goal.x, goal.y, 10, 10);
 
+  rect(60, 300, 600, 20)
+
   if (pop.allDead()) {
     pop.calcFitness();
     pop.naturalSelection();

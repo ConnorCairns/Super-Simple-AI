@@ -40,6 +40,9 @@ class Dot {
         if (this.pos.x < 1 || this.pos.y < 1 || this.pos.x > width - 1 || this.pos.y > height - 1) {
             this.dead = true;
         }
+        if (this.pos.x > 60 && this.pos.x < 640 && this.pos.y > 300 && this.pos.y < 320) {
+            this.dead = true;
+        }
     }
 
     calcFitness() {
