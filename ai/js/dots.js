@@ -1,9 +1,9 @@
 class Dot {
-    constructor() {
+    constructor(mutationRate) {
         this.pos = createVector(width / 2, height - 10);
         this.vel = createVector(0, 0);
         this.acc = createVector(0, 0);
-        this.brain = new Brain(400);
+        this.brain = new Brain(400, mutationRate);
         this.dead = false;
         this.goal = false;
         this.fitness = 0;
@@ -40,7 +40,7 @@ class Dot {
         if (this.pos.x < 1 || this.pos.y < 1 || this.pos.x > width - 1 || this.pos.y > height - 1) {
             this.dead = true;
         }
-        if (this.pos.x > 60 && this.pos.x < 640 && this.pos.y > 300 && this.pos.y < 320) {
+        if (this.pos.x > 70 && this.pos.x < 670 && this.pos.y > 300 && this.pos.y < 320) {
             this.dead = true;
         }
     }

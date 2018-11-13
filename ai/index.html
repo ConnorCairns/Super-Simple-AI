@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dot AI</title>
-    <style> body {padding: 0; margin: 0;} </style>
-    <script src="../p5.min.js"></script>
-    <script src="../addons/p5.dom.min.js"></script>
-    <script src="../addons/p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
-    <script src="dots.js"></script>
-    <script src="brain.js"></script>
-    <script src="population.js"></script>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot AI</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="../p5.min.js"></script>
+  <script src="../addons/p5.dom.min.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="js/sketch.js"></script>
+  <script src="js/dots.js"></script>
+  <script src="js/brain.js"></script>
+  <script src="js/population.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-2">
+      <h1>Super Simple AI</h1>
+      <hr class="mt-1 mb-4">
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div id="sketch"></div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12 text-center">
+        <hr class="mt-1 mb-4">
+        <h1>Edit</h1>
+        <div id="population" class="my-2 input">
+          <p class="mb-0">Population Size</p>
+          <div id="popAlert" class="alert alert-danger mb-2" role="alert" style="display:none">
+            Warning <br> Large populations may cause lag or crashing
+          </div>
+        </div>
+        <div id="mutationRate" class="my-2 input">
+          <p class="mb-0">Mutation Rate (%)</p>
+          <div id="mutationAlert" class="alert alert-danger mb-2" role="alert" style="display:none">
+            Please enter a value from 1-100
+          </div>
+        </div>
+        <div id="submitButton" class="my-2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

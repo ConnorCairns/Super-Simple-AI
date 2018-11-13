@@ -1,12 +1,13 @@
 class Population {
-    constructor(size) {
-        this.fitnessSum = 0
-        this.generation = 1
+    constructor(size, mutationRate) {
+        this.fitnessSum = 0;
+        this.generation = 1;
         this.bestDot = 0;
         this.minStep = 400;
         this.dots = [];
+        this.mutationRate = mutationRate
         for (let i = 0; i < size; i++) {
-            this.dots[i] = new Dot();
+            this.dots[i] = new Dot(this.mutationRate);
         }
     }
 
@@ -58,7 +59,7 @@ class Population {
         this.getBestDot();
         this.newDots = [];
         for (let i = 0; i < this.dots.length; i++) {
-            this.newDots[i] = new Dot();
+            this.newDots[i] = new Dot(this.mutationRate);
         }
         this.newDots[0] = this.dots[this.bestDot].getBaby();
         this.newDots[0].isBest = true;
